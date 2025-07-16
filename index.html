@@ -8,12 +8,18 @@
 	 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<script>
+		//Empêche l'accès si non connecté
+		if (localStorage.getElementsByTagName('authentificated') != "true") {
+			window.location.href = "login.html";
+		}
+	</script>
 	<header>
     <div class="container">
     	<img src="img/logo.png" alt="logo N&B DESIGN" class="logo" width="50px" height="50px">
     	<hl>N&B DESIGN</hl>
 	</div>
-	<p class="slogan">La creativite au service du design
+	<p class="slogan">La créativité au service du design
 	</p>
 	<nav>
 	<ul>
@@ -30,7 +36,7 @@
       <section id="about" class="section">
       	 <div class="container">
       	 <h2>A Propos</h2>
-      	 <p> N&B DESIGN est une entreprise creative specialise dans la conception graphique. Nous vous accompagnons pour creer des visuels percutants qui valorisent votre image.
+      	 <p> N&B DESIGN est une entreprise créative specialisé dans la conception graphique. Nous vous accompagnons pour créer des visuels percutants qui valorisent votre image.
       	  </div>
      </section>
            
@@ -38,13 +44,13 @@
        	<div class="container">
        		<h2>Nos Services</h2>
        		<ul class="services-list">
-       			<li>Creation des affiches et flyers </li>
-       			<li>Conception des Logos personnalises</li>
-       			<li>Creation des CV professionnel</li>
-       			<li>Creation des Billets d'invitations(Anniversaire, marriage...)</li>
+       			<li>Création des affiches et flyers </li>
+       			<li>Conception des Logos personnalisés</li>
+       			<li>Création des CV professionnel</li>
+       			<li>Création des Billets d'invitations(Anniversaire, marriage...)</li>
        			<li>Carte de Visits</li>
-       			<li>Banniere publicitaire</li>
-       			<li>Visuels pour Reseaux</li>
+       			<li>Bannière publicitaire</li>
+       			<li>Visuels pour Réseaux</li>
        		</ul>
        	</div>
        </section>
@@ -56,13 +62,14 @@
        		<textarea name="message" placeholder="votre message" rows="5" required></textarea>
        		<button type="submit">Envoyer</button>
        	</form>
-       	</div> 	
+       	</div>
        </section>
         <a href="https://wa.me/237692757238" class="whatsapp" target="-blank">Discuter sur Whatsapp</a>
 
        <footer>
+       	<button onclick="logout()" style="float: right;">Deconnexion</button>
        	<div class="container">
-       		<p>&copy; 2025 N&B DESIGN. Tous droits reserves</p>
+       		<p>&copy; 2025 N&B DESIGN. Tous droits reservés</p>
        	</div>
        </footer>
 </body>
