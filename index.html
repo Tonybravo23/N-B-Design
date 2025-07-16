@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="style/style.css"></style>
 	 <title>N&BDESIGN</title>
 	 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 	<script>
 		//Empêche l'accès si non connecté
-		if (localStorage.getElementsByTagName('authentificated') != "true") {
+		if (localStorage.getItem('authentificated') !== "true") {
 			window.location.href = "login.html";
 		}
 	</script>
